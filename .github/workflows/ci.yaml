@@ -71,7 +71,7 @@ jobs:
 
     # Trivy Filesystem Scan
     - name: Run Trivy Filesystem Scan
-      uses: aquasecurity/trivy-action@0.28.0
+      uses: aquasecurity/trivy-action@v0.35.0
       with:
         scan-type: 'fs'
         scan-ref: '.'
@@ -90,7 +90,7 @@ jobs:
 
     # Trivy Image Scan
     - name: Run Trivy Image Scan
-      uses: aquasecurity/trivy-action@0.28.0
+      uses: aquasecurity/trivy-action@v0.35.0
       with:
         image-ref: 'vanshitsharma07/fullstack-todo-app:${{ github.run_id }}'
         severity: 'HIGH,CRITICAL'
